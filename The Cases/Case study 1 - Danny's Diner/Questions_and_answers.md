@@ -27,10 +27,14 @@ ORDER BY
 
 **Results:**
 
-"customer_id"	"amount_spent_per_customer"
-"A"	76
-"B"	74
-"C"	36
+```sql
+customer_id  amount_spent_per_customer
+------------+-------------------------+	
+A           | 76                      |
+B	    | 74                      |
+C	    | 36 		      |
+``` 
+
 ### 2. How many days has each customer visited the restaurant?
 
 ```
