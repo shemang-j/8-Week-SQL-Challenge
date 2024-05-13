@@ -7,5 +7,5 @@ All solutions were coded using PostgreSQL.
 
 
 ## Case Studies
-* [Case Study #1 - Danny's Diner](./The Cases/Case study 1 - Danny's Diner/README.md)
+* [Case Study #1 - Danny's Diner](./The_Cases/Case_study_1_Danny's_Diner/README.md)
 
