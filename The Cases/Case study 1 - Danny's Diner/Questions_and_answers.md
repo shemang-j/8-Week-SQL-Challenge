@@ -27,12 +27,19 @@ ORDER BY
 
 **Results:**
 
-| "customer_id"	"amount_spent_per_customer" |
-|-------------------------------------------|
-| "A"	76                                    |
-| "B"	74                                    |
-| "C"	36                                    |
+ customer_id  |	amount_spent_per_customer|
+--------------+--------------------------+
+ A	      |	76                       |           
+ B	      |	74                       |            
+ C	      |	36                       |            
 
+
+| customer_id                                | amount_spent_per_customer |   |
+|--------------------------------------------|---------------------------|---|
+| --------------+--------------------------+ |                           |   |
+| A                                          | 76                        |   |
+| B                                          | 74                        |   |
+| C                                          | 36                        |   |
 
 ### 2. How many days has each customer visited the restaurant?
 
@@ -61,6 +68,14 @@ customer_id |number_of_days|
 A           | 4            |
 B           | 6            |
 C           | 2            |
+
+| customer_id                  | number_of_days |
+|------------------------------|----------------|
+| ------------+--------------+ |                |
+| A                            | 4              |
+| B                            | 6              |
+| C                            | 2              |
+
 
 ### 3. What was the first item from the menu purchased by each customer?
 
