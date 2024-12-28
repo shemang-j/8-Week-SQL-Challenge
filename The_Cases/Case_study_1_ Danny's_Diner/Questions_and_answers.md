@@ -5,7 +5,7 @@
 
 ### 1. What is the total amount each customer spent at the restaurant?
 
-```
+```sql
 SELECT
     S.customer_id,
     SUM(M.price) AS AMOUNT_SPENT_PER_CUSTOMER
@@ -37,7 +37,7 @@ ORDER BY
 
 ### 2. How many days has each customer visited the restaurant?
 
-```
+```sql
 SELECT
     customer_id,
     COUNT(DISTINCT order_date) AS NUMBER_OF_DAYS
@@ -67,7 +67,7 @@ ORDER BY
 
 ### 3. What was the first item from the menu purchased by each customer?
 
-```
+```sql
 SELECT 
     DISTINCT customer_id,
     product_name,
@@ -106,7 +106,7 @@ WHERE RANK = 1;
 
 ### 4. What is the most purchased item on the menu and how many times was it purchased by all customers?
 
-```
+```sql
 SELECT
     M.product_name,
     COUNT(*) AS TOTAL_NUMBER_OF_PURCHASED_ITEMS
@@ -137,7 +137,7 @@ LIMIT 1;
 
 ### 5. Which item was the most popular for each customer?
 
-```
+```sql
 SELECT
     customer_id,
     product_name
@@ -180,7 +180,7 @@ WHERE COUNT = 1;
 
 ### 6. Which item was purchased first by the customer after they became a member?
 
-```
+```sql
 SELECT
     customer_id,
     product_name,
@@ -229,7 +229,7 @@ WHERE RANK =1;
 
 ### 7. Which item was purchased just before the customer became a member?
 
-```
+```sql
 SELECT
     customer_id,
     product_name,
@@ -278,7 +278,7 @@ WHERE RANK = 1;
 
 ### 8. What is the total items and amount spent for each member before they became a member?
 
-```
+```sql
 SELECT
         S.customer_id,
         COUNT(*) AS TOTAL_ITEMS,
@@ -320,7 +320,7 @@ ORDER BY
 
 ### 9. If each $1 spent equates to 10 points and sushi has a 2x points multiplier - how many points would each customer have?
 
-```
+```sql
 SELECT
     S.customer_id,
     SUM(CASE WHEN M.product_name = 'sushi' THEN M.price*10*2
@@ -356,7 +356,7 @@ ORDER BY
 
 ### 10. In the first week after a customer joins the program (including their join date) they earn 2x points on all items, not just sushi - how
 
-```
+```sql
 SELECT
     S.customer_id,
     SUM(CASE WHEN M.product_name = 'sushi' 
@@ -399,7 +399,7 @@ GROUP BY
 
 **1. JOIN ALL THINGS**
 
-```
+```sql
 SELECT
     S.customer_id,
     S.order_date, 
@@ -444,7 +444,7 @@ ORDER BY
 
 **2. RANK ALL THE THINGS**
 
-```
+```sql
 WITH customer_ranking AS (
     SELECT
         S.customer_id,
